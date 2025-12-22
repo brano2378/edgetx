@@ -323,44 +323,85 @@
     #define TR_BL_TOGGLE_KEY               BL_SELECT_KEY " to toggle"
     #define TR_BL_EXIT_KEY                 BL_EXIT_KEY " foer att avbryta"
 
-#else
+#elif defined(TRANSLATIONS_SK)
 
-    #define TR_BL_USB_CONNECTED           "USB Connected"
-    #define TR_BL_USB_PLUGIN              "Or plug in a USB cable"
-    #define TR_BL_USB_MASS_STORE          "for mass storage"
-    #define TR_BL_WRITE_FW                "Write Firmware"
-    #define TR_BL_FORK                    "Fork:"
-    #define TR_BL_VERSION                 "Version:"
+    // Poznamka: nutne pouzitie textu bez diakritiky - obmedzenie velkosti pamete bootloadera!
+    #define TR_BL_USB_CONNECTED           "USB pripojene"
+    #define TR_BL_USB_PLUGIN              "alebo pripojte USB kabel"
+    #define TR_BL_USB_MASS_STORE          "pre pouzitie uloziska"
+    #define TR_BL_WRITE_FW                "Nahrat firmware"
+    #define TR_BL_FORK                    "Vetva:"
+    #define TR_BL_VERSION                 "Verzia:"
     #define TR_BL_RADIO                   "Radio:"
-    #define TR_BL_EXIT                    "Exit"
-    #define TR_BL_DIR_MISSING             "Directory is missing"
-    #define TR_BL_DIR_EMPTY               "Directory is empty"
-    #define TR_BL_WRITING_FW              "Writing..."
-    #define TR_BL_WRITING_COMPL           "Writing complete"
-    #define TR_BL_ENABLE                  "Enable"
-    #define TR_BL_DISABLE                 "Disable"
+    #define TR_BL_EXIT                    "Ukoncit"
+    #define TR_BL_DIR_MISSING             "Adresar chyba"
+    #define TR_BL_DIR_EMPTY               "Adresar je prazdny"
+    #define TR_BL_WRITING_FW              "Nahravanie firmware ..."
+    #define TR_BL_WRITING_COMPL           "Nahravanie dokoncene"
+    #define TR_BL_ENABLE                  "Povolene"
+    #define TR_BL_DISABLE                 "Zakazane"
 
     #if !defined(COLORLCD)
-      #define TR_BL_HOLD_ENTER_TO_START    TR("Hold [ENT] to start", "Hold [ENT] to start writing")
+      #define TR_BL_HOLD_ENTER_TO_START    TR("Drzat [ENT] pre zahajenie", "Drzat [ENT] pre zahajenie nahravania")
     #endif
-    #define TR_BL_INVALID_FIRMWARE         TR("Not a valid firmware!", "Not a valid firmware file!")
+    #define TR_BL_INVALID_FIRMWARE         TR("Neplatny firmware!", "Neplatny subor s firmwerom")
 
     // Bootloader Taranis specific - ASCII characters only
-    #define TR_BL_POWER_KEY                "Press the power button."
-    #define TR_BL_FLASH_EXIT               "Exit the flashing mode."
+    #define TR_BL_POWER_KEY                "Stlacte tlacitdlo napajenia."
+    #define TR_BL_FLASH_EXIT               "Ukoncit rezim nahravania."
 
     // Bootloader Horus specific - ASCII characters only
-    #define TR_BL_ERASE_INT_FLASH          "Erase Internal Flash Storage"
-    #define TR_BL_ERASE_FLASH              "Erase Flash Storage"
-    #define TR_BL_ERASE_FLASH_MSG          "This may take up to 200s"
-    #define TR_BL_RF_USB_ACCESS            "RF USB access"
-    #define TR_BL_CURRENT_FW               "Current Firmware:"
+    #define TR_BL_ERASE_INT_FLASH          "Vymazanie internej Flash pamate"
+    #define TR_BL_ERASE_FLASH              "Vymazanie Flash pamate"
+    #define TR_BL_ERASE_FLASH_MSG          "Moze to trvat az 200s"
+    #define TR_BL_RF_USB_ACCESS            "RF USB pristup"
+    #define TR_BL_CURRENT_FW               "Aktualny firmware:"
 
-    #define TR_BL_SELECT_KEY               BL_SELECT_KEY " to select file"
-    #define TR_BL_FLASH_KEY                "Hold " BL_SELECT_KEY " long to flash"
-    #define TR_BL_ERASE_KEY                "Hold " BL_SELECT_KEY " long to erase"
-    #define TR_BL_TOGGLE_KEY               BL_SELECT_KEY " to toggle"
-    #define TR_BL_EXIT_KEY                 BL_EXIT_KEY " to exit"
+    #define TR_BL_SELECT_KEY               BL_SELECT_KEY " pre vybranie suboru"
+    #define TR_BL_FLASH_KEY                "Drzat dlho " BL_SELECT_KEY " pro nahranie"
+    #define TR_BL_ERASE_KEY                "Drzat " BL_SELECT_KEY " dlho pre zmazanie"
+    #define TR_BL_TOGGLE_KEY               BL_SELECT_KEY " prepnut"
+    #define TR_BL_EXIT_KEY                 BL_EXIT_KEY " pre ukoncenie"
+
+
+#else
+
+    #define TR_BL_USB_CONNECTED           "USB pripojene"
+    #define TR_BL_USB_PLUGIN              "Alebo pripojte USB kabel"
+    #define TR_BL_USB_MASS_STORE          "pre ulozisko"
+    #define TR_BL_WRITE_FW                "Zapis firmweru"
+    #define TR_BL_FORK                    "Vetva:"
+    #define TR_BL_VERSION                 "Verzia:"
+    #define TR_BL_RADIO                   "Radio:"
+    #define TR_BL_EXIT                    "Koniec"
+    #define TR_BL_DIR_MISSING             "Chyba adresar"
+    #define TR_BL_DIR_EMPTY               "Adresar je prazdny"
+    #define TR_BL_WRITING_FW              "Zapisujem..."
+    #define TR_BL_WRITING_COMPL           "Zapis kompletny"
+    #define TR_BL_ENABLE                  "Aktivovat"
+    #define TR_BL_DISABLE                 "Deaktivovat"
+
+    #if !defined(COLORLCD)
+      #define TR_BL_HOLD_ENTER_TO_START    TR("Drzat [ENT] pre start", "Drzat [ENT] pre start zapisu")
+    #endif
+    #define TR_BL_INVALID_FIRMWARE         TR("Neplatny firmware!", "Nespravny subor firmweru!")
+
+    // Bootloader Taranis specific - ASCII characters only
+    #define TR_BL_POWER_KEY                "Stlac tlacidlo napajania."
+    #define TR_BL_FLASH_EXIT               "Koniec flashovacieho modu."
+
+    // Bootloader Horus specific - ASCII characters only
+    #define TR_BL_ERASE_INT_FLASH          "vymazanie internej flash pamate"
+    #define TR_BL_ERASE_FLASH              "Vymazanie flash uloziska"
+    #define TR_BL_ERASE_FLASH_MSG          "Moze to trvat az 200s"
+    #define TR_BL_RF_USB_ACCESS            "RF USB pristup"
+    #define TR_BL_CURRENT_FW               "Aktualny Firmware:"
+
+    #define TR_BL_SELECT_KEY               BL_SELECT_KEY " pre vyber suboru"
+    #define TR_BL_FLASH_KEY                "Drzat " BL_SELECT_KEY " dlho pre zapis"
+    #define TR_BL_ERASE_KEY                "Drzat " BL_SELECT_KEY " dlho pre zmamzanie"
+    #define TR_BL_TOGGLE_KEY               BL_SELECT_KEY " prepnut"
+    #define TR_BL_EXIT_KEY                 BL_EXIT_KEY " pre ukoncenie"
 
 #endif
 
